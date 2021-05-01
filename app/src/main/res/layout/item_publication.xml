@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:id="@+id/itemPublicationCardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_publication_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameAnimalValueTV"
+            android:layout_width="250dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagePublication">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/breedValueTV"
+            android:layout_width="250dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="3dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameAnimalValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/addressValueTV"
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="23dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/breedValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/vaccineNameValueTV"
+            android:layout_width="170dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="152dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/addressValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/vaccineDateValueTV"
+            android:layout_width="120dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/vaccineValidityValueTV"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/vaccineNameValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/vaccineValidityValueTV"
+            android:layout_width="120dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="64dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vaccineNameValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/remedyNameValueTV"
+            android:layout_width="170dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="152dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/remedyIcon"
+            app:layout_constraintTop_toBottomOf="@+id/vaccineDateValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/remedyDateValueTV"
+            android:layout_width="120dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/remedyValidityValueTV"
+            app:layout_constraintStart_toEndOf="@+id/remedyIcon"
+            app:layout_constraintTop_toBottomOf="@+id/remedyNameValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/remedyValidityValueTV"
+            android:layout_width="120dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="64dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/remedyNameValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/diseaseNameValueTV"
+            android:layout_width="170dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="152dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toEndOf="@+id/diseaseIcon"
+            app:layout_constraintTop_toBottomOf="@+id/remedyDateValueTV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/descriptionValueTV"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="15dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diseaseIcon">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/vaccineIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressValueTV"
+            app:srcCompat="@drawable/icone_vaccine" />
+
+        <ImageView
+            android:id="@+id/remedyIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vaccineIcon"
+            app:srcCompat="@drawable/icon_remedy" />
+
+        <ImageView
+            android:id="@+id/diseaseIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/descriptionValueTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/remedyIcon"
+            app:srcCompat="@drawable/icone_disease" />
+
+        <ImageView
+            android:id="@+id/imageUser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_profile_home_page" />
+
+        <TextView
+            android:id="@+id/userNamePublication"
+            android:layout_width="229dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+            app:layout_constraintStart_toEndOf="@+id/imageUser"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imagePublication"
+            android:layout_width="0dp"
+            android:layout_height="158dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageUser"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

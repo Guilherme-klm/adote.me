@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.CreatePublicationActivity">
+
+    <data>
+        <variable
+            name="registerViewModel"
+            type="com.example.adoteme.viewmodel.RegisterViewModel" />
+
+        <variable
+            name="healthViewModel"
+            type="com.example.adoteme.viewmodel.HealthViewModel" />
+
+        <variable
+            name="descriptionViewModel"
+            type="com.example.adoteme.viewmodel.DescriptionViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/register_laytout"
+                    android:layout_width="match_parent"
+                    android:layout_height="670dp">
+
+                    <EditText
+                        android:id="@+id/nameET"
+                        android:layout_width="114dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="32dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="Bobby"
+                        android:text="@={registerViewModel.nameAnimal}"
+                        app:layout_constraintBottom_toTopOf="@+id/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+                    <TextView
+                        android:id="@+id/nameTv"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="36dp"
+                        android:text="Nome*"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/breedET"
+                        android:layout_width="114dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="32dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="Vira lata"
+                        android:text="@={registerViewModel.breed}"
+                        app:layout_constraintBottom_toTopOf="@+id/view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/breedTV" />
+
+                    <TextView
+                        android:id="@+id/breedTV"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginEnd="96dp"
+                        android:text="Raça*"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view"
+                        style="@style/Divider.Horizontal"
+                        android:layout_width="350dp"
+                        android:layout_marginTop="132dp"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.588"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view3"
+                        style="@style/Divider.Horizontal"
+                        android:layout_width="350dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="32dp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/neighborhoodET" />
+
+                    <View
+                        android:id="@+id/view4"
+                        style="@style/Divider.Horizontal"
+                        android:layout_width="350dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="22dp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+                    <EditText
+                        android:id="@+id/stateET"
+                        android:layout_width="114dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="São Paulo"
+                        android:text="@={registerViewModel.state}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stateTV" />
+
+                    <TextView
+                        android:id="@+id/stateTV"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="32dp"
+                        android:text="Estado*"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                    <EditText
+                        android:id="@+id/cityET"
+                        android:layout_width="114dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="Osasco"
+                        android:text="@={registerViewModel.city}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cityTV" />
+
+                    <TextView
+                        android:id="@+id/cityTV"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="96dp"
+                        android:text="Cidade*"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                    <EditText
+                        android:id="@+id/neighborhoodET"
+                        android:layout_width="114dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="32dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="Vila Campesina"
+                        android:text="@={registerViewModel.neighborhood}"
+                        app:layout_constraintBottom_toTopOf="@+id/view2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/neighborhoodTV" />
+
+                    <TextView
+                        android:id="@+id/neighborhoodTV"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Bairro*"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stateET" />
+
+                    <EditText
+                        android:id="@+id/streetET"
+                        android:layout_width="114dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="32dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="Rua tal numero 4"
+                        android:text="@={registerViewModel.street}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/streetTV" />
+
+                    <TextView
+                        android:id="@+id/streetTV"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginEnd="96dp"
+                        android:text="Rua"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cityET" />
+
+                    <ImageView
+                        android:id="@+id/photo_animal"
+                        android:layout_width="0dp"
+                        android:layout_height="169dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view3"
+                        app:srcCompat="@drawable/no_image" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="112dp"
+                        android:onClick="searchPhoto"
+                        android:text="Adicionar Imagem"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/photo_animal" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="560dp"
+                    android:layout_below="@+id/register_laytout"
+                    android:id="@+id/health_layout">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Doença"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linha2" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Remédio"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linha1" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/dateTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="163dp"
+                        android:text="@string/validityTV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+                    <EditText
+                        android:id="@+id/vaccineET"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="40dp"
+                        android:ems="10"
+                        android:hint="Nome"
+                        android:background="@drawable/custom_input"
+                        android:text="@={healthViewModel.nameVaccine}"
+                        android:inputType="textPersonName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/dateVaccineET"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="41dp"
+                        android:layout_marginBottom="40dp"
+                        android:ems="10"
+                        android:hint="00/00/0000"
+                        android:background="@drawable/custom_input"
+                        android:text="@={healthViewModel.dateVaccine}"
+                        android:inputType="date"
+                        app:layout_constraintBottom_toTopOf="@+id/linha1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vaccineET" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName4"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="41dp"
+                        android:layout_marginEnd="76dp"
+                        android:layout_marginBottom="40dp"
+                        android:ems="10"
+                        android:hint="00/00/0000"
+                        android:background="@drawable/custom_input"
+                        android:inputType="date"
+                        android:text="@={healthViewModel.validityVaccine}"
+                        app:layout_constraintBottom_toTopOf="@+id/linha1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vaccineET" />
+
+                    <View
+                        android:id="@+id/linha1"
+                        style="@style/Divider.Horizontal"
+                        android:layout_width="350dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="208dp"
+                        android:layout_marginEnd="30dp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName5"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="40dp"
+                        android:ems="10"
+                        android:hint="Nome"
+                        android:background="@drawable/custom_input"
+                        android:text="@={healthViewModel.nameRemedy}"
+                        android:inputType="textPersonName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linha1" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName6"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginBottom="40dp"
+                        android:ems="10"
+                        android:hint="00/00/0000"
+                        android:inputType="date"
+                        android:background="@drawable/custom_input"
+                        android:text="@={healthViewModel.dateRemedy}"
+                        app:layout_constraintBottom_toTopOf="@+id/linha2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName7"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginEnd="77dp"
+                        android:layout_marginBottom="40dp"
+                        android:ems="10"
+                        android:hint="00/00/0000"
+                        android:text="@={healthViewModel.validityRemedy}"
+                        android:inputType="date"
+                        android:background="@drawable/custom_input"
+                        app:layout_constraintBottom_toTopOf="@+id/linha2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+                    <View
+                        android:id="@+id/linha2"
+                        style="@style/Divider.Horizontal"
+                        android:layout_width="350dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="40dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName8"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="40dp"
+                        android:ems="10"
+                        android:hint="Nome"
+                        android:background="@drawable/custom_input"
+                        android:text="@={healthViewModel.nameDisease}"
+                        android:inputType="textPersonName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linha2" />
+
+
+                    <TextView
+                        android:id="@+id/vaccineTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Vacina"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/dateTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vaccineET" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="159dp"
+                        android:text="@string/validityTV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vaccineET" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_below="@+id/health_layout"
+                    android:id="@+id/description_layout">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="84dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="168dp"
+                        android:text="Descrição"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/descriptionET"
+                        android:layout_width="374dp"
+                        android:layout_height="172dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:lines="6"
+                        android:background="@drawable/custom_input"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"
+                        android:text="@={descriptionViewModel.description}"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        app:layout_constraintVertical_bias="0.066" />
+
+                    <Button
+                        android:id="@+id/saveButton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="82dp"
+                        android:layout_height="107dp"
+                        android:layout_marginEnd="164dp"
+                        android:layout_marginBottom="72dp"
+                        android:drawableTop="@drawable/icon_publication"
+                        android:onClick="save"
+                        android:text="Publicar"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/icon_publication" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

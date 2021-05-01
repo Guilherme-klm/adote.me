@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.LoginActivity">
+
+    <data>
+        <variable
+            name="loginActivityViewModel"
+            type="com.example.adoteme.viewmodel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_login">
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:ems="10"
+            android:hint="@string/email_text"
+            android:inputType="textEmailAddress"
+            android:text="@={loginActivityViewModel.email}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="@string/password_text"
+            android:inputType="textPassword"
+            android:text="@={loginActivityViewModel.password}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+        <ImageButton
+            android:id="@+id/loginBtn"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="163dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="163dp"
+            android:background="@drawable/botao_entrar"
+            android:onClick="login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/spinner_login"
+            style="Widget.MaterialComponents.CircularProgressIndicator.Medium"
+            android:layout_width="69dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="548dp"
+            android:layout_marginEnd="148dp"
+            android:indeterminate="true"
+            android:visibility="@{loginActivityViewModel.loadingVisibility}"
+            app:indicatorSize="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/create_account"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="163dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="163dp"
+            android:background="@drawable/botao_criar_conta"
+            android:onClick="redirectToCreateAccountActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+        <View
+            android:id="@+id/linha1"
+            style="@style/Divider.Horizontal"
+            android:layout_width="100dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="99dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+        <View
+            android:id="@+id/linha2"
+            style="@style/Divider.Horizontal"
+            android:layout_width="100dp"
+            android:layout_marginTop="99dp"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+        <TextView
+            android:id="@+id/errorMessageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@{loginActivityViewModel.errorMessage}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="196dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="196dp"
+            android:layout_marginBottom="10dp"
+            android:text="OU"
+            app:layout_constraintBottom_toTopOf="@+id/create_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="245dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="76dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/adote_me" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

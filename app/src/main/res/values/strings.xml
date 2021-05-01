@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">adote.me</string>
+    <string name="validityTV">Validade</string>
+    <string name="dateTV">Data</string>
+    <string name="email_text">E-mail</string>
+    <string name="password_text">Password</string>
+    <string name="add_publication">Criar publicação</string>
+    <string name="view_profile">Perfil</string>
+
+    <string-array name="localizations">
+        <item>Estado</item>
+        <item>Cidade</item>
+        <item>Bairro</item>
+    </string-array>
+</resources>

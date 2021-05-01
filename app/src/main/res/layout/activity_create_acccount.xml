@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="accountViewModel"
+            type="com.example.adoteme.viewmodel.AccountViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/nameAccountET"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={accountViewModel.name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameAccountTV" />
+
+        <EditText
+            android:id="@+id/birthDateAccountET"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="date"
+            android:text="@={accountViewModel.date}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthDateAccountTV" />
+
+        <EditText
+            android:id="@+id/emailAccountET"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="@={accountViewModel.email}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailAccountTV" />
+
+        <EditText
+            android:id="@+id/passwordAccountET"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="@={accountViewModel.password}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordAccountTV" />
+
+        <EditText
+            android:id="@+id/countryAccountET"
+            android:layout_width="334dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={accountViewModel.country}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countryAccountTV" />
+
+        <EditText
+            android:id="@+id/stateAccountET"
+            android:layout_width="334dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={accountViewModel.state}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stateAccountTV" />
+
+
+        <EditText
+            android:id="@+id/cityAccountET"
+            android:layout_width="334dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={accountViewModel.city}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cityAccountTV" />
+
+        <EditText
+            android:id="@+id/neighborhoodAccountET"
+            android:layout_width="334dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={accountViewModel.neighborhood}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neighborhoodAccountTV" />
+
+        <EditText
+            android:id="@+id/streetAccountET"
+            android:layout_width="235dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={accountViewModel.street}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/streetAccountTV" />
+
+        <EditText
+            android:id="@+id/numberAccountET"
+            android:layout_width="88dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="@={accountViewModel.number}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberAccountTV" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:clickable="true"
+            android:onClick="create"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+
+        <TextView
+            android:id="@+id/nameAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:text="Nome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/birthDateAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="64dp"
+            android:text="Data de Nascimento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emailAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:text="Email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameAccountET" />
+
+        <TextView
+            android:id="@+id/passwordAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="152dp"
+            android:text="Senha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthDateAccountET" />
+
+        <TextView
+            android:id="@+id/stateAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Estado"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countryAccountET" />
+
+        <TextView
+            android:id="@+id/countryAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:text="País"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailAccountET" />
+
+        <TextView
+            android:id="@+id/cityAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Cidade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stateAccountET" />
+
+        <TextView
+            android:id="@+id/neighborhoodAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="15dp"
+            android:text="Bairro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cityAccountET" />
+
+        <TextView
+            android:id="@+id/streetAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Rua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neighborhoodAccountET" />
+
+        <TextView
+            android:id="@+id/numberAccountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="68dp"
+            android:text="Número"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neighborhoodAccountET" />
+
+        <TextView
+            android:id="@+id/errorMessage"
+            android:layout_width="283dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberAccountET"
+            tools:visibility="invisible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
